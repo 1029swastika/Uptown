@@ -1,4 +1,4 @@
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { Link, useParams } from "react-router-dom";
 
@@ -6,7 +6,7 @@ import "../App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 
 function AgentDetail() {
   const [agentDetail, setAgentDetail] = useState([]);
@@ -16,7 +16,7 @@ function AgentDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/agent/${params.id}`)
+      .get(`https://jobholic.onrender.com/api/agent/${params.id}`)
       .then((data) => setAgentDetail(data.data));
   }, []);
   console.log(agentDetail);

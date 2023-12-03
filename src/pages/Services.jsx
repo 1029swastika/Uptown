@@ -1,5 +1,4 @@
-import { Parallax, Background } from "react-parallax";
-import { IoIosSearch } from "react-icons/io";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { NavLink } from "react-router-dom";
 
@@ -17,7 +16,7 @@ function Services() {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:8000/api/happyclient/create",
+        "https://jobholic.onrender.com/api/happyclient/create",
         {
           message: message,
         },

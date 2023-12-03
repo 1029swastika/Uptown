@@ -1,10 +1,9 @@
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import "../App.css";
 
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { MdCheck } from "react-icons/md";
-import { Rating } from "react-simple-star-rating";
 import "../App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -12,7 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import ReviewSection from "../components/ReviewSection";
 
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 
 function PropertiesDetail() {
   const [propertyDetail, setPropertyDetail] = useState([]);
@@ -21,13 +20,11 @@ function PropertiesDetail() {
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const [menu, setMenu] = useState("features");
-  const navigate = useNavigate();
   const params = useParams();
-  console.log(params.id);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/room/${params.id}`)
+      .get(`https://jobholic.onrender.com/api/room/${params.id}`)
       .then((data) => {
         let reviews = data.data.reviews;
         let reviewsLength = reviews.length;
@@ -75,7 +72,7 @@ function PropertiesDetail() {
     e.preventDefault();
     axios
       .put(
-        `http://localhost:8000/api/room/review/${_id}`,
+        `https://jobholic.onrender.com/api/room/review/${_id}`,
         {
           rating: rating,
           comment: comment,
@@ -106,10 +103,6 @@ function PropertiesDetail() {
       });
   }
   console.log("After:", submitCount);
-
-  // function handleRating(rate) {
-  //   setRating(rate);
-  // }
 
   console.log(menu);
   console.log(_id);

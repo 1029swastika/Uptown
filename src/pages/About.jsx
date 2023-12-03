@@ -1,5 +1,4 @@
-import { Parallax, Background } from "react-parallax";
-import { IoIosSearch } from "react-icons/io";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { NavLink } from "react-router-dom";
 

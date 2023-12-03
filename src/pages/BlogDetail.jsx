@@ -1,4 +1,4 @@
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
@@ -8,10 +8,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import RecentSmallBlog from "../components/RecentSmallBlog";
 import CommentBox from "../components/CommentBox";
-import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 
 function BlogDetail() {
   const [blogDetail, setBlogDetail] = useState([]);
@@ -24,18 +23,17 @@ function BlogDetail() {
 
   const navigate = useNavigate();
   const params = useParams();
-  console.log(params.id);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/count/blog")
+      .get("https://jobholic.onrender.com/api/count/blog")
       .then((data) => setCount(data.data))
       .catch((err) => console.log(err));
   }, []);
   console.log(count);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/recent/blog")
+      .get("https://jobholic.onrender.com/api/recent/blog")
       .then((data) => setBlogs(data.data))
       .catch((err) => console.log(err));
   }, []);
@@ -43,7 +41,7 @@ function BlogDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/blog/${params.id}`)
+      .get(`https://jobholic.onrender.com/api/blog/${params.id}`)
       .then((data) => setBlogDetail(data.data));
   }, []);
   // console.log(blogDetail);
@@ -58,7 +56,7 @@ function BlogDetail() {
     console.log("yeta pugyo?????");
     axios
       .put(
-        `http://localhost:8000/api/blog/review/${_id}`,
+        `https://jobholic.onrender.com/api/blog/review/${_id}`,
         {
           comment: comment,
         },
@@ -85,7 +83,7 @@ function BlogDetail() {
     e.preventDefault();
     axios
       .put(
-        `http://localhost:8000/api/blog/reply/${_id}`,
+        `https://jobholic.onrender.com/api/blog/reply/${_id}`,
         {
           commentId: cmtId,
           comment: reply,

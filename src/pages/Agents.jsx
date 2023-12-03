@@ -1,8 +1,6 @@
-import { Parallax, Background } from "react-parallax";
-import { IoIosSearch } from "react-icons/io";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { Link, NavLink } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 
 import "../App.css";
 import AgentComponent from "../components/AgentComponent";
@@ -14,7 +12,7 @@ function Agents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/agent")
+      .get("https://jobholic.onrender.com/api/agent")
       .then((data) => setAgents(data.data[0].data));
   }, []);
   console.log(agents);

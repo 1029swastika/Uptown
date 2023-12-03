@@ -1,4 +1,4 @@
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import { FaRegMap } from "react-icons/fa6";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { CiMail } from "react-icons/ci";

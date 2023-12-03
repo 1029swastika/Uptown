@@ -1,4 +1,4 @@
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import BlogComponent from "../components/BlogComponent";
@@ -13,7 +13,7 @@ function Blog() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/blog${params.search}`)
+      .get(`https://jobholic.onrender.com/api/blog${params.search}`)
       .then((data) => setBlogs(data.data[0].data))
       .catch((err) => console.log(err));
   }, []);

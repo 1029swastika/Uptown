@@ -1,4 +1,4 @@
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import bgImg from "../assets/bgImg.jpg";
 import { Link, NavLink, useLocation, useSearchParams } from "react-router-dom";
 import ShowcaseRoom from "../components/ShowcaseRoom";
@@ -24,7 +24,7 @@ function Properties() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/room${params.search}`)
+      .get(`https://jobholic.onrender.com/api/room${params.search}`)
       .then((res) => {
         setProperties(res.data[0].data);
         if (res.data[0].metadata[0]) {

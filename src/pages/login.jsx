@@ -15,13 +15,12 @@ function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/api/login", {
+      .post("https://jobholic.onrender.com/api/login", {
         email: e.target.email.value,
         password: e.target.password.value,
       })
       .then((res) => {
         console.log(res.data);
-        // console.log(res.data.token);
 
         toast.success("login Successful", {
           position: "top-center",
@@ -118,15 +117,7 @@ function LoginPage() {
                   className="text-sm  hover:text-myPink cursor-pointer
                  font-light text-gray-500 dark:text-gray-400"
                 >
-                  Don’t have an account yet?{" "}
-                  <Link to="/register">
-                    {/* <a
-                      href="#"
-                      className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                    > */}
-                    Sign up
-                    {/* </a> */}
-                  </Link>
+                  Don’t have an account yet? <Link to="/register">Sign up</Link>
                 </p>
               </form>
             </div>

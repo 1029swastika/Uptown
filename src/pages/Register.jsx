@@ -1,7 +1,3 @@
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-
-// import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,12 +6,10 @@ import { toast } from "react-toastify";
 function RegisterPage() {
   const [error, setError] = useState({});
 
-  // const [userData, setUserData] = useState(initialState);
   const [profileImage, setProfileImage] = useState(null);
   const navigate = useNavigate();
 
   function handleImage(e) {
-    // console.log(fd);
     console.log(e.target.files[0]);
     setProfileImage(e.target.files[0]);
   }
@@ -31,14 +25,11 @@ function RegisterPage() {
     fd.append("repeat_password", e.target.repeat_password.value);
     fd.append("image", profileImage || "");
 
-    // console.log(fd.get("username"));
     console.log(...fd);
     axios
-      .post("http://localhost:8000/api/signup", fd)
+      .post("https://jobholic.onrender.com/api/signup", fd)
       .then((res) => {
         toast.success("Signup Success");
-        // console.log(res.data);
-        // console.log("hello bro");
 
         navigate("/login");
       })
@@ -60,19 +51,10 @@ function RegisterPage() {
               temp.image = "*Please add a Image";
             }
           });
-          // setError(temp);
 
           setError({ ...temp });
-
-          // setError(Err.response?.data.errors[0].msg);
         }
 
-        // if (error.repeat_password) {
-        //   setError({
-        //     ...error,
-        //     repeat_password: "Both password should be same",
-        //   });
-        // }
         if (Err.response.data.msg) {
           setError({ email: Err.response.data.msg });
         }
