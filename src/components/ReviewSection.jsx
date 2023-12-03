@@ -1,6 +1,6 @@
 import StarRatings from "react-star-ratings";
 import ReviewBox from "./ReviewBox";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 

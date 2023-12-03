@@ -1,8 +1,3 @@
-import { MdOutlineMessage } from "react-icons/md";
-import blog1 from "../assets/blog1.jpg";
-import blog2 from "../assets/blog2.jpg";
-import blog3 from "../assets/blog3.jpg";
-import blog4 from "../assets/blog4.jpg";
 import BlogComponent from "./BlogComponent";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -16,7 +11,7 @@ function RecentBlog() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/blog?perPage=4`)
+      .get(`https://jobholic.onrender.com/api/blog?perPage=4`)
       .then((data) => setBlogs(data.data[0].data))
       .catch((err) => console.log(err));
   }, []);

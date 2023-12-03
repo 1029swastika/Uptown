@@ -1,11 +1,10 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 
 // import "react-toastify/dist/r";
 import "../App.css";

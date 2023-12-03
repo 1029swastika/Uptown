@@ -1,6 +1,3 @@
-import p1 from "../assets/p1.jpg";
-import p2 from "../assets/p2.jpg";
-import p3 from "../assets/p3.jpg";
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,7 +15,7 @@ function Testimonials() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/happyclient`)
+      .get(`https://jobholic.onrender.com/api/happyclient`)
       .then((res) => setClients(res.data))
       .catch((err) => console.log(err));
   }, []);

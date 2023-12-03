@@ -1,4 +1,4 @@
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 function AgentComponent({ img, name, company, total_sales }) {
   return (
     <div>

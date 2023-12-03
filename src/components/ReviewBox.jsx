@@ -1,18 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { FaStar } from "react-icons/fa";
+
 import StarRatings from "react-star-ratings";
 
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 
 function ReviewBox({ cmt }) {
   const [user, setUser] = useState({});
 
-  console.log(cmt);
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/user/${cmt.created_by}`)
+      .get(`https://jobholic.onrender.com/api/user/${cmt.created_by}`)
       .then((data) => setUser(data.data))
       .catch((err) => console.log(err));
   }, []);

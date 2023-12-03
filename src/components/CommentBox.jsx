@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
 import { FaStar } from "react-icons/fa";
 
-const url = "http://localhost:8000/";
+const url = "https://jobholic.onrender.com/";
 
 function CommentBox({ cmt }) {
   const [user, setUser] = useState({});

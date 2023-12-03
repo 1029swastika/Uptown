@@ -12,7 +12,7 @@ function Agents() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/agent?perPage=4")
+      .get("https://jobholic.onrender.com/api/agent?perPage=4")
       .then((data) => setAgents(data.data[0].data));
   }, []);
   return (
