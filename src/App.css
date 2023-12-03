@@ -1,0 +1,170 @@
+/* .mybg {
+  height: 800px;
+  background-color: rebeccapurple;
+} */
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 2px solid white;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: none;
+  border-left: none;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
+
+.workflow::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -50px;
+  overflow: visible;
+  width: 55%;
+  height: 100px;
+  background-color: white;
+  z-index: 1;
+  transform: skewY(8deg);
+}
+.workflow::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  bottom: -50px;
+  overflow: visible;
+  width: 55%;
+  height: 100px;
+  background-color: white;
+  z-index: 1;
+  transform: skewY(-8deg);
+}
+
+.jeepBox {
+  box-shadow: -6px 0px 22px -12px#555353;
+  clip-path: inset(1px 1px 1px -30px);
+}
+@media screen and (max-width: 768px) {
+  .jeepBox {
+    box-shadow: none;
+  }
+}
+
+/* for the carousel css */
+
+.slick-dots li.slick-active button::before {
+  color: #e86ed0 !important;
+  font-size: 12px;
+}
+
+.frontImg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  overflow: visible;
+  width: 60%;
+  height: 50px;
+  background: white;
+  z-index: 1;
+  transform: skewY(3deg);
+}
+
+.frontImg::after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 60%;
+  background-color: white;
+  bottom: -30px;
+  right: 0;
+  z-index: 0;
+  transform: skewY(-3deg);
+}
+.aboutImg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  overflow: visible;
+  width: 50%;
+  height: 170px;
+  background: white;
+  z-index: 1;
+  transform: skewY(4deg);
+}
+.aboutImg::after {
+  content: "";
+  position: absolute;
+  height: 170px;
+  width: 50%;
+  background-color: white;
+  bottom: -38px;
+  right: 0;
+  z-index: 0;
+  transform: skewY(-4deg);
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.active {
+  color: #e86ed0;
+}
+
+.style-module_emptyIcons__Bg-FZ {
+  display: flex;
+  flex-direction: row;
+}
+
+.rc-pagination {
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #e86ed0;
+  align-items: center;
+}
+.rc-pagination li {
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+  /* box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 40px 0 rgba(0, 0, 0, 0.19); */
+  padding: 0.5rem;
+  /* display: flex; */
+  text-align: center;
+
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+}
+.rc-pagination-options {
+  display: none;
+}
+.rc-pagination-item-active {
+  color: white;
+  background-color: #e86ed0;
+}
+.rc-pagination-disabled {
+  cursor: no-drop !important;
+  opacity: 0.5;
+}
