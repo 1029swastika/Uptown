@@ -11,7 +11,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import AgentDetail from "./pages/AgentDetail";
-import BlogDetail from "./pages/blogDetail";
+import BlogDetail from "./pages/BlogDetail";
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/Register";
 import { useDispatch } from "react-redux";
