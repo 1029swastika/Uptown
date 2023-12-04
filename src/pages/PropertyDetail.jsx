@@ -143,7 +143,12 @@ function PropertiesDetail() {
       <div className=" container mx-auto">
         <section>
           <div>
-            <img src={url + image} />
+            <div className=" flex items-center justify-center">
+              <img
+                className=" w-1/2  object-cover  h-[550px]"
+                src={url + image}
+              />
+            </div>
             <div className=" flex flex-col items-center gap-2 mt-8 mb-8">
               <p className=" text-gray-400 text-center font-thin ">{address}</p>
               <h2 className=" text-3xl  text-center text-textOne  ">
