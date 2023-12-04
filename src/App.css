@@ -37,9 +37,9 @@
   content: "";
   position: absolute;
   left: -2px;
-  bottom: -50px;
+  bottom: -60px;
   overflow: visible;
-  width: 55%;
+  width: 60%;
   height: 100px;
   background-color: white;
   z-index: 1;
@@ -49,9 +49,9 @@
   content: "";
   position: absolute;
   right: -2px;
-  bottom: -50px;
+  bottom: -60px;
   overflow: visible;
-  width: 55%;
+  width: 60%;
   height: 100px;
   background-color: white;
   z-index: 1;

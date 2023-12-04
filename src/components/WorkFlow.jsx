@@ -7,7 +7,7 @@ function WorkFlow() {
 
   return (
     <section className=" container mx-auto mt-12 ">
-      <div className="workflow bg-room h-[990px] md:h-[900px] bg-cover mb-40  mx-6 relative">
+      <div className="workflow bg-room h-[1000px] md:h-[900px] bg-cover mb-40  mx-6 relative">
         <section className=" flex flex-col items-center pt-12 md:pt-24 absolute  bg-gray-700 bg-opacity-40  md:bg-black w-full md:w-1/2 h-full">
           <div data-aos="fade-up" className="flex items-center gap-2">
             <hr className=" h-[2px] w-12 bg-myPink " />
@@ -26,7 +26,7 @@ function WorkFlow() {
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
             <div
               data-aos="fade-up"
-              className=" text-white  w-32   lg:w-48 flex gap-2 flex-col text-center items-center"
+              className=" text-white  w-38   lg:w-48 flex gap-2 flex-col text-center items-center"
             >
               <span className=" bg-myPink w-20 h-20 lg:w-24 lg:h-24 rounded-full text-center flex items-center justify-center text-4xl">
                 01
@@ -39,7 +39,7 @@ function WorkFlow() {
             </div>
             <div
               data-aos="fade-up"
-              className=" text-white  w-32   lg:w-48 flex gap-2 flex-col text-center items-center"
+              className=" text-white  w-38   lg:w-48 flex gap-2 flex-col text-center items-center"
             >
               <span className=" bg-myPink w-20 h-20 lg:w-24 lg:h-24 rounded-full text-center flex items-center justify-center text-4xl">
                 02
@@ -52,7 +52,7 @@ function WorkFlow() {
             </div>
             <div
               data-aos="fade-up"
-              className=" text-white  w-32   lg:w-48 flex gap-2 flex-col text-center items-center"
+              className=" text-white  w-38   lg:w-48 flex gap-2 flex-col text-center items-center"
             >
               <span className=" bg-myPink w-20 h-20 lg:w-24 lg:h-24 rounded-full text-center flex items-center justify-center text-4xl">
                 03
@@ -65,7 +65,7 @@ function WorkFlow() {
             </div>
             <div
               data-aos="fade-up"
-              className=" text-white w-32   lg:w-48 flex gap-2 flex-col text-center items-center"
+              className=" text-white w-38   lg:w-48 flex gap-2 flex-col text-center items-center"
             >
               <span className=" bg-myPink w-20 h-20 lg:w-24 lg:h-24 rounded-full text-center flex items-center justify-center text-4xl">
                 04
