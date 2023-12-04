@@ -12,7 +12,7 @@ function Offers() {
 
   useEffect(() => {
     axios
-      .get("https://jobholic.onrender.com/api/room?perPage=3")
+      .get("https://uptown-mjbn.onrender.com/api/room?perPage=3")
       .then((res) => setProperties(res.data[0].data))
       .catch((err) => console.log(err));
   }, []);

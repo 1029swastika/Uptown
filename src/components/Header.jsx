@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 // import "react-toastify/dist/r";
 import "../App.css";

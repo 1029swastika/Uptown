@@ -24,7 +24,7 @@ function Properties() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/room${params.search}`)
+      .get(`https://uptown-mjbn.onrender.com/api/room${params.search}`)
       .then((res) => {
         setProperties(res.data[0].data);
         if (res.data[0].metadata[0]) {

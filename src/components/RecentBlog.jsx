@@ -11,7 +11,7 @@ function RecentBlog() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/blog?perPage=4`)
+      .get(`https://uptown-mjbn.onrender.com/api/blog?perPage=4`)
       .then((data) => setBlogs(data.data[0].data))
       .catch((err) => console.log(err));
   }, []);

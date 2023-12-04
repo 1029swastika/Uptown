@@ -6,7 +6,7 @@ import "../App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function AgentDetail() {
   const [agentDetail, setAgentDetail] = useState([]);
@@ -16,7 +16,7 @@ function AgentDetail() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/agent/${params.id}`)
+      .get(`https://uptown-mjbn.onrender.com/api/agent/${params.id}`)
       .then((data) => setAgentDetail(data.data));
   }, []);
   console.log(agentDetail);

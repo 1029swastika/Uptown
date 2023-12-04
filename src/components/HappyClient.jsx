@@ -1,4 +1,4 @@
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function HappyClient({ client }) {
   const { message, image, username } = client;

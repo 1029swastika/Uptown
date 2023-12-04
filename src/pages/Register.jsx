@@ -27,7 +27,7 @@ function RegisterPage() {
 
     console.log(...fd);
     axios
-      .post("https://jobholic.onrender.com/api/signup", fd)
+      .post("https://uptown-mjbn.onrender.com/api/signup", fd)
       .then((res) => {
         toast.success("Signup Success");
 

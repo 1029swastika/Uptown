@@ -1,5 +1,5 @@
 import { MdOutlineMessage } from "react-icons/md";
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function RecentSmallBlog({ blog }) {
   const { image, title, description, blogDate } = blog;

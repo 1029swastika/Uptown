@@ -16,7 +16,7 @@ function Services() {
     e.preventDefault();
     axios
       .post(
-        "https://jobholic.onrender.com/api/happyclient/create",
+        "https://uptown-mjbn.onrender.com/api/happyclient/create",
         {
           message: message,
         },

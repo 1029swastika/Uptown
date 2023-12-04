@@ -10,7 +10,7 @@ import RecentSmallBlog from "../components/RecentSmallBlog";
 import CommentBox from "../components/CommentBox";
 import { ToastContainer, toast } from "react-toastify";
 
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function BlogDetail() {
   const [blogDetail, setBlogDetail] = useState([]);
@@ -26,14 +26,14 @@ function BlogDetail() {
 
   useEffect(() => {
     axios
-      .get("https://jobholic.onrender.com/api/count/blog")
+      .get("https://uptown-mjbn.onrender.com/api/count/blog")
       .then((data) => setCount(data.data))
       .catch((err) => console.log(err));
   }, []);
   console.log(count);
   useEffect(() => {
     axios
-      .get("https://jobholic.onrender.com/api/recent/blog")
+      .get("https://uptown-mjbn.onrender.com/api/recent/blog")
       .then((data) => setBlogs(data.data))
       .catch((err) => console.log(err));
   }, []);
@@ -41,7 +41,7 @@ function BlogDetail() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/blog/${params.id}`)
+      .get(`https://uptown-mjbn.onrender.com/api/blog/${params.id}`)
       .then((data) => setBlogDetail(data.data));
   }, []);
   // console.log(blogDetail);
@@ -56,7 +56,7 @@ function BlogDetail() {
     console.log("yeta pugyo?????");
     axios
       .put(
-        `https://jobholic.onrender.com/api/blog/review/${_id}`,
+        `https://uptown-mjbn.onrender.com/api/blog/review/${_id}`,
         {
           comment: comment,
         },
@@ -83,7 +83,7 @@ function BlogDetail() {
     e.preventDefault();
     axios
       .put(
-        `https://jobholic.onrender.com/api/blog/reply/${_id}`,
+        `https://uptown-mjbn.onrender.com/api/blog/reply/${_id}`,
         {
           commentId: cmtId,
           comment: reply,

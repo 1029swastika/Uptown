@@ -15,7 +15,7 @@ function Testimonials() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/happyclient`)
+      .get(`https://uptown-mjbn.onrender.com/api/happyclient`)
       .then((res) => setClients(res.data))
       .catch((err) => console.log(err));
   }, []);

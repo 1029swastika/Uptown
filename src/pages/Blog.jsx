@@ -13,7 +13,7 @@ function Blog() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/blog${params.search}`)
+      .get(`https://uptown-mjbn.onrender.com/api/blog${params.search}`)
       .then((data) => setBlogs(data.data[0].data))
       .catch((err) => console.log(err));
   }, []);

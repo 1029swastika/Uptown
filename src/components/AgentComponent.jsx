@@ -1,4 +1,4 @@
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 function AgentComponent({ img, name, company, total_sales }) {
   return (
     <div>

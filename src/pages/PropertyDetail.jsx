@@ -11,7 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import ReviewSection from "../components/ReviewSection";
 
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function PropertiesDetail() {
   const [propertyDetail, setPropertyDetail] = useState([]);
@@ -24,7 +24,7 @@ function PropertiesDetail() {
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/room/${params.id}`)
+      .get(`https://uptown-mjbn.onrender.com/api/room/${params.id}`)
       .then((data) => {
         let reviews = data.data.reviews;
         let reviewsLength = reviews.length;
@@ -72,7 +72,7 @@ function PropertiesDetail() {
     e.preventDefault();
     axios
       .put(
-        `https://jobholic.onrender.com/api/room/review/${_id}`,
+        `https://uptown-mjbn.onrender.com/api/room/review/${_id}`,
         {
           rating: rating,
           comment: comment,

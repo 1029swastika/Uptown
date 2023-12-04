@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 
 import StarRatings from "react-star-ratings";
 
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function ReviewBox({ cmt }) {
   const [user, setUser] = useState({});
 
   useEffect(() => {
     axios
-      .get(`https://jobholic.onrender.com/api/user/${cmt.created_by}`)
+      .get(`https://uptown-mjbn.onrender.com/api/user/${cmt.created_by}`)
       .then((data) => setUser(data.data))
       .catch((err) => console.log(err));
   }, []);

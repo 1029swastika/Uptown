@@ -2,7 +2,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { LuBath } from "react-icons/lu";
 import { FaHouse } from "react-icons/fa6";
 import chain2 from "../assets/link2.png";
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function ShowcaseRoom({ property }) {
   console.log(property);

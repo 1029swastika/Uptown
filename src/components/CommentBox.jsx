@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
-const url = "https://jobholic.onrender.com/";
+const url = "https://uptown-mjbn.onrender.com/";
 
 function CommentBox({ cmt }) {
   const [user, setUser] = useState({});
@@ -10,7 +10,7 @@ function CommentBox({ cmt }) {
   console.log(cmt);
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/user/${cmt.created_by}`)
+      .get(`https://uptown-mjbn.onrender.com/api/user/${cmt.created_by}`)
       .then((data) => setUser(data.data))
       .catch((err) => console.log(err));
   }, []);
