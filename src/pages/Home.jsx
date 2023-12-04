@@ -11,12 +11,22 @@ import Agents from "../components/Agents";
 import RecentBlog from "../components/RecentBlog";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router";
+import { useState } from "react";
 
 function Home() {
+  const [input, setInput] = useState("");
+
   Aos.init({ duration: 400, easing: "ease-in-sine" });
   function handleScroll() {
     window.scrollBy(0, 600);
   }
+  const navigate = useNavigate();
+  function handleSubmit(e) {
+    e.preventDefault();
+    navigate(`/properties?address=${input}`);
+  }
+
   return (
     <div>
       <div className=" frontImg  relative  -top-20 z-10">
@@ -44,9 +54,11 @@ function Home() {
                   with the necessary regelialia. It is a paradisematic country,
                   in which roasted parts
                 </p>
-                <form>
+                <form onSubmit={(e) => handleSubmit(e)}>
                   <div className="  flex mx-2  bg-white rounded-full">
                     <input
+                      onChange={(e) => setInput(e.target.value)}
+                      value={input}
                       className="p-4 rounded-full  rounded-r-none grow outline-none"
                       placeholder=" Search Location"
                     />
