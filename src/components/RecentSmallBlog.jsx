@@ -2,7 +2,7 @@ import { MdOutlineMessage } from "react-icons/md";
 const url = "https://uptown-mjbn.onrender.com/";
 
 function RecentSmallBlog({ blog }) {
-  const { image, title, description, blogDate } = blog;
+  const { image, title, description, blogDate, _id } = blog;
 
   return (
     <div className="flex gap-4">

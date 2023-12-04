@@ -20,6 +20,7 @@ function BlogDetail() {
   const [comment, setComment] = useState("");
   const [reply, setReply] = useState("");
   const [open, setOpen] = useState(false);
+  const [blogId, setBlogId] = useState("");
 
   const navigate = useNavigate();
   const params = useParams();
@@ -43,7 +44,7 @@ function BlogDetail() {
     axios
       .get(`https://uptown-mjbn.onrender.com/api/blog/${params.id}`)
       .then((data) => setBlogDetail(data.data));
-  }, []);
+  }, [params.id]);
   // console.log(blogDetail);
   const { title, image, description, reviews, category, _id } = blogDetail;
 
@@ -233,9 +234,9 @@ function BlogDetail() {
               <div className=" flex flex-col gap-4">
                 {blogs?.map((blog) => {
                   return (
-                    <div key={blog._id}>
+                    <Link to={`/blog/detail/${blog._id}`} key={blog._id}>
                       <RecentSmallBlog blog={blog} />
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
