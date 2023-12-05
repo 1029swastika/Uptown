@@ -125,7 +125,7 @@ function Properties() {
 
           <Link
             to={"/properties/create"}
-            className=" text-white bg-myPink px-4 py-2 rounded-md "
+            className=" bg-myPink text-gray-50 px-4 py-1 rounded-md hover:scale-110  hover:drop-shadow-lg  transition-transform"
           >
             Proceed
           </Link>
