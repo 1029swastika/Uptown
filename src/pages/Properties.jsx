@@ -10,11 +10,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Pagination from "rc-pagination/lib/Pagination";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
 function Properties() {
   const [properties, setProperties] = useState([]);
   const [currentSearchParams, setSearchParams] = useSearchParams();
 
+  const userDetail = useSelector((state) => state.user.data);
   const params = useLocation();
   const [paginationData, setpaginationData] = useState({
     total: 10,
@@ -118,17 +120,26 @@ function Properties() {
             }}
           />
         </div>
+
         <section className=" mt-40 flex flex-col  items-center gap-4 justify-center">
           <h2 className=" text-textThree text-center">
             Wanna Sell your Property?
           </h2>
-
-          <Link
-            to={"/properties/create"}
-            className=" bg-myPink text-gray-50 px-4 py-1 rounded-md hover:scale-110  hover:drop-shadow-lg  transition-transform"
-          >
-            Proceed
-          </Link>
+          {userDetail ? (
+            <Link
+              to={"/properties/create"}
+              className=" bg-myPink text-gray-50 px-4 py-1 rounded-md hover:scale-110  hover:drop-shadow-lg  transition-transform"
+            >
+              Proceed
+            </Link>
+          ) : (
+            <p className=" text-textThree ">
+              Looks like you have not logged In
+              <Link className=" text-myPink ml-2" to={"/login"}>
+                login Here
+              </Link>
+            </p>
+          )}
         </section>
       </section>
     </div>

@@ -60,7 +60,7 @@ function CreateProperty() {
           const errorArray = err.response.data;
           //   console.log("eeror array here", errorArray);
           let temp = {};
-          errorArray.forEach((error) => {
+          errorArray?.forEach((error) => {
             temp[error.path] = `${error.path} is required`;
           });
           setFormError(temp);
