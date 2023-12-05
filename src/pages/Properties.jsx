@@ -16,7 +16,8 @@ function Properties() {
   const [properties, setProperties] = useState([]);
   const [currentSearchParams, setSearchParams] = useSearchParams();
 
-  const userDetail = useSelector((state) => state.user.data);
+  const userDetail = useSelector((state) => state.user.value);
+  console.log(userDetail);
   const params = useLocation();
   const [paginationData, setpaginationData] = useState({
     total: 10,
