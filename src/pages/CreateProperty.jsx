@@ -43,6 +43,25 @@ function CreateProperty() {
       fd.append("description", roomDescription || "");
     }
 
+    console.log("yeta?");
+
+    // Using fetch
+    //   fetch("https://uptown-mjbn.onrender.com/api/create/room", {
+    //     method: "POST",
+    //     body: fd,
+    //     headers: {
+    //       Authorization: `bearer ${localStorage.getItem("token")}`,
+    //     },
+    //   })
+    //     .then((response) => {
+    //       if (!response.ok) {
+    //         throw new Error(`HTTP error! Status: ${response.status}`);
+    //       }
+    //       return response.json();
+    //     })
+    //     .then((data) => console.log(data))
+    //     .catch((error) => console.log("Error:", error));
+    // }
     axios
       .post("https://uptown-mjbn.onrender.com/api/create/room", fd, {
         headers: {
@@ -51,14 +70,15 @@ function CreateProperty() {
       })
       .then((res) => {
         navigate("/properties");
-
+        console.log(res.data);
         toast.success("posted");
       })
       .catch((err) => {
-        setFormError({});
+        console.log(err);
+        // setFormError({});
         if (err.response) {
-          const errorArray = err.response.data;
-          //   console.log("eeror array here", errorArray);
+          let errorArray = err.response.data;
+          console.log("error array here", errorArray);
           let temp = {};
           errorArray?.forEach((error) => {
             temp[error.path] = `${error.path} is required`;
