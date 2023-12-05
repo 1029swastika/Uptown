@@ -9,6 +9,7 @@ import "../App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Pagination from "rc-pagination/lib/Pagination";
+import { toast } from "react-toastify";
 
 function Properties() {
   const [properties, setProperties] = useState([]);
@@ -34,7 +35,37 @@ function Properties() {
       .catch((err) => console.log(err));
   }, [params.search]);
   console.log(properties);
-  console.log(properties);
+
+  function handleDelete(id) {
+    console.log("deleted hai");
+    console.log(id);
+    axios
+      .delete(`http://localhost:8000/api/room/delete/${id}`, {
+        headers: {
+          authorization: `bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        setProperties((properties) =>
+          properties.filter((property) => property._id !== id)
+        );
+        toast.success("Deleted");
+      })
+      .catch((err) => {
+        toast.error(err.response.data.msg);
+        console.log(err);
+      });
+  }
+
+  // function handleEdit(id) {
+  //   axios
+  //     .put(`https://uptown-mjbn.onrender.com/api/room/edit${id}`)
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     });
+  // }
+
+  // console.log(properties);
   return (
     <div>
       <div className=" aboutImg  relative  -top-20 z-10">
@@ -68,13 +99,9 @@ function Properties() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center ">
           {properties?.map((property) => {
             return (
-              <Link
-                data-aos="fade-up"
-                to={`/properties/detail/${property._id}`}
-                key={property._id}
-              >
-                <ShowcaseRoom property={property} />
-              </Link>
+              <div data-aos="fade-up" key={property._id}>
+                <ShowcaseRoom handleDelete={handleDelete} property={property} />
+              </div>
             );
           })}
         </div>
@@ -91,6 +118,18 @@ function Properties() {
             }}
           />
         </div>
+        <section className=" mt-40 flex flex-col  items-center gap-4 justify-center">
+          <h2 className=" text-textThree text-center">
+            Wanna Sell your Property?
+          </h2>
+
+          <Link
+            to={"/properties/create"}
+            className=" text-white bg-myPink px-4 py-2 rounded-md "
+          >
+            Proceed
+          </Link>
+        </section>
       </section>
     </div>
   );

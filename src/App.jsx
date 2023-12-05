@@ -18,6 +18,8 @@ import { useDispatch } from "react-redux";
 import { setUserDetail } from "../redux/userSlice";
 import axios from "axios";
 import PropertyDetail from "./pages/PropertyDetail";
+import CreateProperty from "./pages/CreateProperty";
+import EditProperty from "./pages/EditProperty";
 
 function App() {
   const dispatch = useDispatch();
@@ -48,6 +50,8 @@ function App() {
         <Route path="/blog/detail/:id" element={<BlogDetail />} />
         <Route path="/services" element={<Services />} />
         <Route path="/properties" element={<Properties />} />
+        <Route path="/properties/create" element={<CreateProperty />} />
+        <Route path="/properties/edit/:id" element={<EditProperty />} />
         <Route path="/properties/detail/:id" element={<PropertyDetail />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />

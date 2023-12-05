@@ -248,9 +248,10 @@ function PropertiesDetail() {
           )}
           {menu === "description" ? (
             <div className=" my-8 text-start flex items-center justify-center">
-              <p className="w-2/3 text-sm text-textThree  font-light leading-loose ">
-                {description}
-              </p>{" "}
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                className="w-2/3 text-sm text-textThree  font-light leading-loose "
+              ></p>{" "}
             </div>
           ) : null}
           {menu === "review" && (
