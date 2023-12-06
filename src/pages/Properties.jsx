@@ -43,19 +43,20 @@ function Properties() {
     console.log("deleted hai");
     console.log(id);
     axios
-      .delete(`http://localhost:8000/api/room/delete/${id}`, {
+      .delete(`https://uptown-mjbn.onrender.com/api/room/delete/${id}`, {
         headers: {
           authorization: `bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((res) => {
+        console.log(res.data);
         setProperties((properties) =>
           properties.filter((property) => property._id !== id)
         );
         toast.success("Deleted");
       })
       .catch((err) => {
-        toast.error(err.response.data.msg);
+        toast.error(err.response?.data.msg);
         console.log(err);
       });
   }
