@@ -31,6 +31,7 @@ function ShowcaseRoom({ handleDelete, property }) {
     <div>
       <div className="group relative h-[410px] mt-16">
         <img
+          alt="room"
           className=" w-[90vw] md:w-80 h-64 object-cover  "
           src={url + image}
         />
