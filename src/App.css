@@ -168,3 +168,26 @@
   cursor: no-drop !important;
   opacity: 0.5;
 }
+
+/* Dark mode style */
+
+@media (prefers-color-scheme: dark) {
+  .frontImg::before {
+    background: #121212;
+  }
+  .frontImg::after {
+    background: #121212;
+  }
+  .aboutImg::after {
+    background: #121212;
+  }
+  .aboutImg::before {
+    background: #121212;
+  }
+  .workflow::before {
+    background: #121212;
+  }
+  .workflow::after {
+    background: #121212;
+  }
+}

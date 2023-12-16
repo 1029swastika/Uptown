@@ -85,7 +85,7 @@ function Testimonials() {
             </h1>
             <hr className=" h-[2px] w-12 bg-myPink" />
           </div>
-          <h2 className=" mb-24 text-4xl mt-4 font-semibold text-black">
+          <h2 className=" dark:text-white mb-24 text-4xl mt-4 font-semibold text-black">
             Happy Clients
           </h2>
         </div>

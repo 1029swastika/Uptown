@@ -10,7 +10,7 @@ function RecentSmallBlog({ blog }) {
       <div className=" flex flex-col w-64 gap-2 max-h-96">
         <div className=" text-sm text-textThree">
           <div>
-            <h2 className="  text-small font-thin text-black hover:text-myPink cursor-pointer">
+            <h2 className=" dark:text-slate-200  text-small font-thin text-black hover:text-myPink cursor-pointer">
               {title}
             </h2>
           </div>

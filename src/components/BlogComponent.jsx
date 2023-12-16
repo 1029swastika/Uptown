@@ -9,7 +9,7 @@ function BlogComponent({ blog }) {
       <div className=" flex flex-col w-64 gap-2 max-h-96">
         <div className=" text-sm text-textThree">
           <div>
-            <h2 className=" text-lg text-black">{title}</h2>
+            <h2 className=" dark:text-slate-300 text-lg text-black">{title}</h2>
           </div>
           <div className=" flex gap-4">
             <div className=" inline-block ">

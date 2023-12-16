@@ -55,14 +55,14 @@ function Home() {
                   in which roasted parts
                 </p>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                  <div className="  flex mx-2  bg-white rounded-full">
+                  <div className=" dark:bg-[#3b3b3b] flex mx-2  bg-white rounded-full">
                     <input
                       onChange={(e) => setInput(e.target.value)}
                       value={input}
                       className="p-4 rounded-full  rounded-r-none grow outline-none"
                       placeholder=" Search Location"
                     />
-                    <button className=" grow-0 bg-myPink p-4 rounded-r-full rounded-b-full">
+                    <button className="  grow-0 bg-myPink p-4 rounded-r-full rounded-b-full">
                       <IoIosSearch />
                     </button>
                   </div>

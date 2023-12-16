@@ -4,7 +4,7 @@ function HappyClient({ client }) {
   const { message, image, username } = client;
   return (
     <>
-      <div className="  justify-between h-64   w-full sm:w-full md:w-56 lg:w-72 flex flex-col gap-6 p-4 shadow-md text-start">
+      <div className="  rounded-lg dark:bg-slate-300 justify-between h-64   w-full sm:w-full md:w-56 lg:w-72 flex flex-col gap-6 p-4 shadow-md text-start">
         <p className=" text-ellipsis  text-textOne md:text-sm lg:text-lg">
           {message}
         </p>

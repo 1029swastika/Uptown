@@ -25,7 +25,7 @@ function Agents() {
         </div>
         <h2
           data-aos="fade-up"
-          className=" mb-24 text-4xl mt-4 font-semibold text-black"
+          className=" dark:text-white mb-24 text-4xl mt-4 font-semibold text-black"
         >
           Our Agents
         </h2>

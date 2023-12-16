@@ -9,7 +9,7 @@ import { IoIosMail } from "react-icons/io";
 function Footer() {
   const todayDate = new Date().getFullYear();
   return (
-    <footer className=" py-20 bg-mygray ">
+    <footer className=" py-20 bg-mygray dark:text-textThree ">
       <div className="container mx-auto">
         <section className=" bg-mygray  grid-cols-1  sm:grid-cols-3 md:grid-cols-4 grid lg:grid-cols-5">
           <div className=" flex flex-col w-full sm:w-48  md:w-52 gap-4 p-4">
